@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+</head>
+<style>
+    .popup {
+        min-width: 20px;
+        min-height:20px;
+        background: white;
+        padding: 2rem;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        font-family: "Lobster";
+        text-align: center;
+        align-items: center;
+    }
+
+    .black {
+        color: black;
+    }
+
+    .grey {
+        color: rgb(110, 109, 109);
+    }
+
+    p {
+        font-family: "Raleway", sans-serif;
+        font-size: 0.75rem;
+        text-align: center;
+    }
+
+    .button {
+        display: flex;
+        margin: auto;
+        background-color: whitesmoke;
+        position: relative;
+        height: 2rem;
+        width: 4rem;
+        border-radius: 25px;
+        transition: 1s;
+        font-family: "Raleway", sans-serif;
+        align-items: center;
+    }
+
+    .half {
+        position: absolute;
+        width: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+        cursor: pointer;
+    }
+
+    .circle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+        background-color: black;
+        pointer-events: none;
+        transition: 1s;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    @keyframes transformToBlue {
+        0% {
+            background-color: whitesmoke;
+        }
+
+        100% {
+            background-color: darkgray;
+        }
+    }
+
+    @keyframes transformToYellow {
+        0% {
+            background-color:  black;
+        }
+
+        100% {
+            background-color: gainsboro;
+        }
+    }
+
+    @keyframes moveCircleRight {
+        0% {
+            left: 0;
+            transform: translateX(0);
+            background-color: rgb(30, 29, 27);
+        }
+
+        100% {
+            left: 100%;
+            transform: translateX(-100%);
+            background-color: red;
+        }
+    }
+
+    @keyframes moveCircleLeft {
+        0% {
+            left: 100%;
+            transform: translateX(-100%);
+            background-color: red;
+        }
+
+        100% {
+            left: 0;
+            transform: translateX(0);
+            background-color: rgb(27, 25, 16);
+        }
+    }
+</style>
+
+<body>
+    <div class="popup">
+        <h1> <span class="black">2X</span><span class="grey">Speed</span></h1>
+        <p>
+        Toggle 2X Speed <b>on/off</b> 
+        </p>
+
+        <div class="button">
+            <div class="half" style="left: 5px;">On</div>
+            <div class="half" style="right: 5px; text-align: right;">Off</div>
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    <script src="./popup.js">
+    </script>
+</body>
+</html>
